@@ -164,6 +164,12 @@ namespace Workshop15
                     }
                 }
             }
+
+            public void sortAuthor()
+            {
+                bookList.Sort((b1, b2) => b1.author.CompareTo(b2.author));
+            }
+
         }
 
         static void Main(string[] args)
@@ -189,8 +195,11 @@ namespace Workshop15
 
             Console.WriteLine("\nTechnical Book:");
             l1.printTechnicalBook();
+            Console.WriteLine("\n");
+            l1.sortAuthor();
+            l1.printBookList();
 
-           
+
 
             //Console.WriteLine(tb1.GetType().Name);
 
